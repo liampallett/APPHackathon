@@ -12,6 +12,28 @@
         <div class = ".container-fluid">
             <h1>Leave a blog!</h1>
             <p>Leave a short blog on what you've eaten today!</p>
+            <script>
+                function submitForm() {
+                    let fnameVal = document.getElementById("fname").value;
+                    let lnameVal = document.getElementById("lname").value;
+                    let foodVal = document.getElementById("food").value;
+                    let ratingVal = document.getElementById("rating").value;
+
+                    window.alert("test");
+                }
+            </script>
+            <form>
+                <label for="fname">First Name: </label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name: </label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="food">What did you eat?</label><br>
+                <input type="text" id="food" name="food"></form><br>
+                <label for="rating">How was the food? (1-5)</label><br>
+                <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+                <button type="button" id="submitButton" onclick="submitForm">Submit</button>
+            </form>
         </div>
     </body>
 </html>
