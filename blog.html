@@ -1,9 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-
+        <title>Leave a blog!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles.css">
     </head>
 
     <body>
-        
+
+        <div class = ".container-fluid">
+            <h1>Leave a blog!</h1>
+            <p>Leave a short blog on what you've eaten today!</p>
+            <form>
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="food">What did you eat?</label>
+                <input type="text" id="food" name="food"></form><br>
+                <label for="rating">How was the food? (1-5)</label>
+                <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+                <button type="button" id="submitButton" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function submitForm() {
+                let fnameVal = document.getElementById("fname").value;
+                localStorage.setItem("fname", fnameVal);
+                let lnameVal = document.getElementById("lname").value;
+                localStorage.setItem("lname", lnameVal);
+                let foodVal = document.getElementById("food").value;
+                localStorage.setItem("food", foodVal);
+                let ratingVal = document.getElementById("rating").value;
+                localStorage.setItem("rating", ratingVal);
+
+                
+            }
+        </script>
     </body>
 </html>
